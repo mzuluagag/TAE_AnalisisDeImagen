@@ -12,9 +12,9 @@ shinyServer(function(input, output) {
       footer = modalButton("Cerrar"),
       easyClose = TRUE,
       fluidRow(column(10, align = "center", offset = 1,
-                      output$tabla<-renderTable(
+                      output$result <- renderText(
                         if(input$apply2){
-                          daygen(input$picture)
+                          FUNCNAME(input$picture)
                         }
                       )
       ))
