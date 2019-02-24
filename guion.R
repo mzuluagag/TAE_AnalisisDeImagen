@@ -1,0 +1,15 @@
+library("pixmap")
+setwd("~/TAE_AnalisisDeImagen")
+x <- read.pnm(file = "faces/an2i/an2i_straight_happy_sunglasses.pgm")
+plot(x)
+
+library(pixmap)
+library(xlsx)
+library(openxlsx)
+setwd("~/TAE_AnalisisDeImagen")
+a<-read.pnm(file.choose())
+dataa<-as.data.frame(a@grey)
+rdataa<-round(dataa,3)
+plot(a)
+write.xlsx(rdataa,"001.xlsx")
+

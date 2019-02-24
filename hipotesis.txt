@@ -1,0 +1,6 @@
+Para las imágenes de mejor resolución
+
+Left sunglasses start at pixel 64 - 44 - 58 - 47
+Right sunglasses start at pixel 43 - 52 - 47 - 60
+Up sunglases start at pixel 43 - 38 - 40 - 42
+Stright sunglasses start at pixel 47 - 45 - 46 - 49
