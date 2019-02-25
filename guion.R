@@ -1,15 +1,21 @@
-library("pixmap")
-setwd("~/TAE_AnalisisDeImagen")
-x <- read.pnm(file = "faces/an2i/an2i_straight_happy_sunglasses.pgm")
-plot(x)
-
 library(pixmap)
-library(xlsx)
-library(openxlsx)
-setwd("~/TAE_AnalisisDeImagen")
-a<-read.pnm(file.choose())
-dataa<-as.data.frame(a@grey)
-rdataa<-round(dataa,3)
-plot(a)
-write.xlsx(rdataa,"001.xlsx")
+library(stringr)
+#library(openxlsx)
+setwd("~/GitHub/TAE_AnalisisDeImagen/faces")
+listaArchivos<-list.files(pattern=".pgm$")
+datos<-as.data.frame((listaArchivos))
+
+for (i in 1:length(listaArchivos)){
+  a<-read.pnm(listaArchivos[i])
+  datamat<-as.matrix(a@grey)
+  datos[i,2]<-mean(datamat)
+  if (!is.na((str_extract(listaArchivos[i],"open")=="open"))){
+    datos[i,3]<-"open"
+  }
+  else if (!is.na((str_extract(listaArchivos[i],"sunglasses")=="sunglasses"))){
+    datos[i,3]<-"sunglasses"
+  }
+}
+datos$V3=gsub("open","0",datos$V3)
+datos$V3=gsub("sunglasses","1",datos$V3)
 
