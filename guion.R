@@ -19,3 +19,4 @@ for (i in 1:length(listaArchivos)){
 datos$V3=gsub("open","0",datos$V3)
 datos$V3=gsub("sunglasses","1",datos$V3)
 
+
