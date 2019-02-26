@@ -28,6 +28,7 @@ datos_an2i$V3<-as.numeric(datos_an2i$V3)
 an2i_svm<-svm(datos_an2i$V3~datos_an2i$V2)
 an2iPredict<-predict(an2i_svm,datos_an2i)
 an2iro<-round(an2iPredict)
+vecfallos<-c(length(which(datos_an2i$V3!=an2iro)))
 vecEx<-c(1-length(which(datos_an2i$V3!=an2iro))/nrow(datos_an2i))
 
 datos_at33<-datos[which(datos$nombre=='at33'),]
@@ -35,6 +36,7 @@ datos_at33$V3<-as.numeric(datos_at33$V3)
 at33_svm<-svm(datos_at33$V3~datos_at33$V2)
 at33Predict<-predict(at33_svm,datos_at33)
 at33ro<-round(at33Predict)
+vecfallos<-append(vecfallos,length(which(datos_at33$V3!=at33ro)))
 vecEx<-append(vecEx,1-(length(which(datos_at33$V3!=at33ro))/nrow(datos_at33)))
 
 datos_boland<-datos[which(datos$nombre=='boland'),]
@@ -161,5 +163,6 @@ datos_tammo$V3<-as.numeric(datos_tammo$V3)
 tammo_svm<-svm(datos_tammo$V3~datos_tammo$V2)
 tammoPredict<-predict(tammo_svm,datos_tammo)
 tammoro<-round(tammoPredict)
+vecfallos<-append(vecfallos,length(which(datos_tammo$V3!=tammoro)))
 vecEx<-append(vecEx,1-(length(which(datos_tammo$V3!=tammoro))/nrow(datos_tammo)))
 
