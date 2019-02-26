@@ -33,114 +33,121 @@ length(which(datos_an2i$V3!=an2iro))
 datos_at33<-datos[which(datos$nombre=='at33'),]
 datos_at33$V3<-as.numeric(datos_at33$V3)
 at33_svm<-svm(datos_at33$V3~datos_at33$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+at33Predict<-predict(at33_svm,datos_at33)
+at33ro<-round(at33Predict)
+length(which(datos_at33$V3!=at33ro))
 
 datos_boland<-datos[which(datos$nombre=='boland'),]
 datos_boland$V3<-as.numeric(datos_boland$V3)
 boland_svm<-svm(datos_boland$V3~datos_boland$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+bolandPredict<-predict(boland_svm,datos_boland)
+bolandro<-round(bolandPredict)
+length(which(datos_boland$V3!=bolandro))
 
 datos_bpm<-datos[which(datos$nombre=='bpm'),]
 datos_bpm$V3<-as.numeric(datos_bpm$V3)
 bpm_svm<-svm(datos_bpm$V3~datos_bpm$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+bpmPredict<-predict(bpm_svm,datos_bpm)
+bpmro<-round(bpmPredict)
+length(which(datos_bpm$V3!=bpmro))
 
 datos_ch4f<-datos[which(datos$nombre=='ch4f'),]
 datos_ch4f$V3<-as.numeric(datos_ch4f$V3)
 ch4f_svm<-svm(datos_ch4f$V3~datos_ch4f$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+ch4fPredict<-predict(ch4f_svm,datos_ch4f)
+ch4fro<-round(ch4fPredict)
+length(which(datos_ch4f$V3!=ch4fro))
 
 datos_cheyer<-datos[which(datos$nombre=='cheyer'),]
 datos_cheyer$V3<-as.numeric(datos_cheyer$V3)
 cheyer_svm<-svm(datos_cheyer$V3~datos_cheyer$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+cheyerPredict<-predict(cheyer_svm,datos_cheyer)
+cheyerro<-round(cheyerPredict)
+length(which(datos_cheyer$V3!=cheyerro))
 
 datos_choon<-datos[which(datos$nombre=='choon'),]
 datos_choon$V3<-as.numeric(datos_choon$V3)
 choon_svm<-svm(datos_choon$V3~datos_choon$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+choonPredict<-predict(choon_svm,datos_choon)
+choonro<-round(choonPredict)
+length(which(datos_choon$V3!=choonro))
 
 datos_danieln<-datos[which(datos$nombre=='danieln'),]
 datos_danieln$V3<-as.numeric(datos_danieln$V3)
 danieln_svm<-svm(datos_danieln$V3~datos_danieln$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+danielnPredict<-predict(danieln_svm,datos_danieln)
+danielnro<-round(danielnPredict)
+length(which(datos_danieln$V3!=danielnro))
 
 datos_glickman<-datos[which(datos$nombre=='glickman'),]
 datos_glickman$V3<-as.numeric(datos_glickman$V3)
 glickman_svm<-svm(datos_glickman$V3~datos_glickman$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+glickmanPredict<-predict(glickman_svm,datos_glickman)
+glickmanro<-round(glickmanPredict)
+length(which(datos_glickman$V3!=glickmanro))
 
 datos_karyadi<-datos[which(datos$nombre=='karyadi'),]
 datos_karyadi$V3<-as.numeric(datos_karyadi$V3)
 karyadi_svm<-svm(datos_karyadi$V3~datos_karyadi$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+karyadiPredict<-predict(karyadi_svm,datos_karyadi)
+karyadiro<-round(karyadiPredict)
+length(which(datos_karyadi$V3!=karyadiro))
 
 datos_kawamura<-datos[which(datos$nombre=='kawamura'),]
 datos_kawamura$V3<-as.numeric(datos_kawamura$V3)
 kawamura_svm<-svm(datos_kawamura$V3~datos_kawamura$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+kawamuraPredict<-predict(kawamura_svm,datos_kawamura)
+kawamuraro<-round(kawamuraPredict)
+length(which(datos_kawamura$V3!=kawamuraro))
 
 datos_kk49<-datos[which(datos$nombre=='kk49'),]
 datos_kk49$V3<-as.numeric(datos_kk49$V3)
 kk49_svm<-svm(datos_kk49$V3~datos_kk49$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+kk49Predict<-predict(kk49_svm,datos_kk49)
+kk49ro<-round(kk49Predict)
+length(which(datos_kk49$V3!=kk49ro))
 
 datos_megak<-datos[which(datos$nombre=='megak'),]
 datos_megak$V3<-as.numeric(datos_megak$V3)
 megak_svm<-svm(datos_megak$V3~datos_megak$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+megakPredict<-predict(megak_svm,datos_megak)
+megakro<-round(megakPredict)
+length(which(datos_megak$V3!=megakro))
 
 datos_mitchell<-datos[which(datos$nombre=='mitchell'),]
 datos_mitchell$V3<-as.numeric(datos_mitchell$V3)
 mitchell_svm<-svm(datos_mitchell$V3~datos_mitchell$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+mitchellPredict<-predict(mitchell_svm,datos_mitchell)
+mitchellro<-round(mitchellPredict)
+length(which(datos_mitchell$V3!=mitchellro))
+
+datos_night<-datos[which(datos$nombre=='night'),]
+datos_night$V3<-as.numeric(datos_night$V3)
+night_svm<-svm(datos_night$V3~datos_night$V2)
+nightPredict<-predict(night_svm,datos_night)
+nightro<-round(nightPredict)
+length(which(datos_night$V3!=nightro))
 
 datos_phoebe<-datos[which(datos$nombre=='phoebe'),]
 datos_phoebe$V3<-as.numeric(datos_phoebe$V3)
 phoebe_svm<-svm(datos_phoebe$V3~datos_phoebe$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+phoebePredict<-predict(phoebe_svm,datos_phoebe)
+phoebero<-round(phoebePredict)
+length(which(datos_phoebe$V3!=phoebero))
 
 datos_saavik<-datos[which(datos$nombre=='saavik'),]
 datos_saavik$V3<-as.numeric(datos_saavik$V3)
 saavik_svm<-svm(datos_saavik$V3~datos_saavik$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+saavikPredict<-predict(saavik_svm,datos_saavik)
+saavikro<-round(saavikPredict)
+length(which(datos_saavik$V3!=saavikro))
 
 datos_steffi<-datos[which(datos$nombre=='steffi'),]
 datos_steffi$V3<-as.numeric(datos_steffi$V3)
 steffi_svm<-svm(datos_steffi$V3~datos_steffi$V2)
-an2iPredict<-predict(an2i_svm,datos_an2i)
-an2iro<-round(an2iPredict)
-length(which(datos_an2i$V3!=an2iro))
+steffiPredict<-predict(steffi_svm,datos_steffi)
+steffiro<-round(steffiPredict)
+length(which(datos_steffi$V3!=steffiro))
 
 datos_sz24<-datos[which(datos$nombre=='sz24'),]
 datos_sz24$V3<-as.numeric(datos_sz24$V3)
