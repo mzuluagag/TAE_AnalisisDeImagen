@@ -77,7 +77,7 @@ datos_choon$V3<-as.numeric(datos_choon$V3)
 choon_svm<-svm(datos_choon$V3~datos_choon$V2)
 choonPredict<-predict(choon_svm,datos_choon)
 choonro<-round(choonPredict)
-vecfallos<-append(vecfallos,length(which(datos_at33$V3!=at33ro)))
+vecfallos<-append(vecfallos,length(which(datos_choon$V3!=choonro)))
 vecEx<-append(vecEx,1-(length(which(datos_choon$V3!=choonro))/nrow(datos_choon)))
 
 datos_danieln<-datos[which(datos$nombre=='danieln'),]
@@ -182,7 +182,13 @@ tammo_svm<-svm(datos_tammo$V3~datos_tammo$V2)
 tammoPredict<-predict(tammo_svm,datos_tammo)
 tammoro<-round(tammoPredict)
 vecfallos<-append(vecfallos,length(which(datos_tammo$V3!=tammoro)))
-vecEx<-append(vecEx,1-(length(which(datos_tammo$V3!=tammoro))/nrow(datos_tammo)))
+vecEx<-round(append(vecEx,1-(length(which(datos_tammo$V3!=tammoro))/nrow(datos_tammo))),2)
+
+vecTotal<-vecfallos/(1-vecEx)
+vecTotal[is.na(vecTotal)]<-32
+tablaRes<-data.frame(personCod,vecfallos,vecTotal,vecEx)
+
+colnames[tablaRes]<-"Persona","Fallos","Total","Proporción"
 
 DetectorGafas<-function(x){
   aux<-str_extract(x, ".+?(?=_)")
