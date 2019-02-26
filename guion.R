@@ -166,3 +166,9 @@ tammoro<-round(tammoPredict)
 vecfallos<-append(vecfallos,length(which(datos_tammo$V3!=tammoro)))
 vecEx<-append(vecEx,1-(length(which(datos_tammo$V3!=tammoro))/nrow(datos_tammo)))
 
+DetectorGafas<-function(x){
+  aux<-str_extract(x, ".+?(?=_)")
+  if (x=="an2i"){
+    
+  }
+}
