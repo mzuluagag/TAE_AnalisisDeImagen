@@ -190,43 +190,95 @@ DetectorGafas<-function(x){
     ind<-which(datos_an2i$fullname==x)
     res<-as.numeric(an2iro[ind])
   }
-  if (aux=="at33"){
+  else if (aux=="at33"){
     ind<-which(datos_at33$fullname==x)
       res<-as.numeric(at33ro[ind])
   }
-  if (aux=="boland"){
+  else if (aux=="boland"){
     ind<-which(datos_boland$fullname==x)
     res<-as.numeric(bolandro[ind])
   }
-  if (aux=="bpm"){
+  else if (aux=="bpm"){
     ind<-which(datos_bpm$fullname==x)
     res<-as.numeric(bpmro[ind])
   }
-  if (aux=="ch4f"){
+  else if (aux=="ch4f"){
     ind<-which(datos_ch4f$fullname==x)
     res<-as.numeric(ch4fro[ind])
   }
-  if (aux=="cheyer"){
+  else if (aux=="cheyer"){
     ind<-which(datos_cheyer$fullname==x)
     res<-as.numeric(cheyerro[ind])
   }
-  if (aux=="choon"){
+  else if (aux=="choon"){
     ind<-which(datos_choon$fullname==x)
     res<-as.numeric(choonro[ind])
   }
-  if (aux=="danieln"){
+  else if (aux=="danieln"){
     ind<-which(datos_danieln$fullname==x)
     res<-as.numeric(danielnro[ind])
   }
-  if (aux=="glickman"){
+  else if (aux=="glickman"){
     ind<-which(datos_glickman$fullname==x)
     res<-as.numeric(glickmanro[ind])
+  }
+  else if (aux=="karyadi"){
+    ind<-which(datos_karyadi$fullname==x)
+    res<-as.numeric(karyadiro[ind])
+  }
+  else if (aux=="kawamura"){
+    ind<-which(datos_kawamura$fullname==x)
+    res<-as.numeric(kawamuraro[ind])
+  }
+  else if (aux=="kk49"){
+    ind<-which(datos_kk49$fullname==x)
+    res<-as.numeric(kk49ro[ind])
+  }
+  else if (aux=="megak"){
+    ind<-which(datos_megak$fullname==x)
+    res<-as.numeric(megakro[ind])
+  }
+  else if (aux=="mitchell"){
+    ind<-which(datos_mitchell$fullname==x)
+    res<-as.numeric(mitchellro[ind])
+  }
+  else if (aux=="night"){
+    ind<-which(datos_night$fullname==x)
+    res<-as.numeric(nightro[ind])
+  }
+  else if (aux=="phoebe"){
+    ind<-which(datos_phoebe$fullname==x)
+    res<-as.numeric(phoebero[ind])
+  }
+  else if (aux=="saavik"){
+    ind<-which(datos_saavik$fullname==x)
+    res<-as.numeric(saavikro[ind])
+  }
+  else if (aux=="steffi"){
+    ind<-which(datos_steffi$fullname==x)
+    res<-as.numeric(steffiro[ind])
+  }
+  else if (aux=="sz24"){
+    ind<-which(datos_sz24$fullname==x)
+    res<-as.numeric(sz24ro[ind])
+  }
+  else if (aux=="tammo"){
+    ind<-which(datos_tammo$fullname==x)
+    res<-as.numeric(tammoro[ind])
   }
   return(res)
   
 }
 
+<<<<<<< HEAD
 GrafiGafas<-function(x){
   img<-read.pnm(x)
   plot(img)
 }
+=======
+
+
+
+
+
+>>>>>>> 839da13dbd0201ba68d90613a70c7df556c130a8
