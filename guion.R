@@ -17,6 +17,7 @@ for (i in 1:length(listaArchivos)){
     datos[i,3]<-"sunglasses"
   }
 }
+datos$fullname<-listaArchivos
 datos$nombre<-str_extract(datos$nombre, ".+?(?=_)")
 datos$V3=gsub("open","0",datos$V3)
 datos$V3=gsub("sunglasses","1",datos$V3)
@@ -186,7 +187,41 @@ vecEx<-append(vecEx,1-(length(which(datos_tammo$V3!=tammoro))/nrow(datos_tammo))
 DetectorGafas<-function(x){
   aux<-str_extract(x, ".+?(?=_)")
   if (aux=="an2i"){
-    ind<-which(datos_an2i==x)
+    ind<-which(datos_an2i$fullname==x)
     res<-as.numeric(an2iro[ind])
   }
+  if (aux=="at33"){
+    ind<-which(datos_at33$fullname==x)
+      res<-as.numeric(at33ro[ind])
+  }
+  if (aux=="boland"){
+    ind<-which(datos_boland$fullname==x)
+    res<-as.numeric(bolandro[ind])
+  }
+  if (aux=="bpm"){
+    ind<-which(datos_bpm$fullname==x)
+    res<-as.numeric(bpmro[ind])
+  }
+  if (aux=="ch4f"){
+    ind<-which(datos_ch4f$fullname==x)
+    res<-as.numeric(ch4fro[ind])
+  }
+  if (aux=="cheyer"){
+    ind<-which(datos_cheyer$fullname==x)
+    res<-as.numeric(cheyerro[ind])
+  }
+  if (aux=="choon"){
+    ind<-which(datos_choon$fullname==x)
+    res<-as.numeric(choonro[ind])
+  }
+  if (aux=="danieln"){
+    ind<-which(datos_danieln$fullname==x)
+    res<-as.numeric(danielnro[ind])
+  }
+  if (aux=="glickman"){
+    ind<-which(datos_glickman$fullname==x)
+    res<-as.numeric(glickmanro[ind])
+  }
+  return(res)
+  
 }
