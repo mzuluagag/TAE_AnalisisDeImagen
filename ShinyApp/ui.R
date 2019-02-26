@@ -1,8 +1,7 @@
 library(shiny)
-library(MASS)
-library(dplyr)
-library(Hmisc)
-library(lubridate)
+library(pixmap)
+library(stringr)
+library(e1071)
 library(shinythemes)
 
 load(file= "www/001",envir = .GlobalEnv,verbose = FALSE)
