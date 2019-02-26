@@ -26,7 +26,8 @@ shinyServer(function(input, output) {
                         if(input$apply){
                           GrafiGafas(input$picture)
                         }
-                      )
+                      ),
+                      output$table <- renderDataTable(tablaRes)
       ))
     ))
   })
