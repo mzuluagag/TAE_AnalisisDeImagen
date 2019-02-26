@@ -10,9 +10,11 @@ texto<-"La aplicación en cuestión busca identificar a las personas con gafas d
 a partir de técnicas de aprendizaje estadístico. Para el funcionamiento de la aplicación,
             se optó por hacer uso de las máquinas de soporte vectorial, ya que la forma del problema
             cumplía con las condiciones de una máquina de soporte vectorial estándar(para dos casos
-            de la variable respuesta). 
+            de la variable respuesta)." 
             
-            Para obtener las variables para el modelo, se hizo lo siguiente: 
+            "
+
+Para obtener las variables para el modelo, se hizo lo siguiente: 
             Se usó la librería pixmap para cargar las imágenes en formato .pgm con la función read.pnm.
             Luego de esto, se le extrajo a cada imagen una matriz de 120x128 dónde cada entrada de esta era 
             el color de cada pixel en donde 0 era negro y 1 era blanco(escala de grises), se le calculó la media
@@ -28,6 +30,7 @@ a partir de técnicas de aprendizaje estadístico. Para el funcionamiento de la 
             en la base de datos. Al calcular las predicciones, en resumen se obtuvo:
 
             "
+
 
 shinyUI(fluidPage(
 theme = "style.css",

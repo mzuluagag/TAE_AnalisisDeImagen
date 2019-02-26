@@ -6,6 +6,10 @@ library(shinythemes)
 
 
 shinyServer(function(input, output) {
+  
+  output$table1=renderTable({
+    tablaRes
+  })
   observeEvent(input$apply, {
     showModal(modalDialog(
       title = "Resultados del analisis de imagen",
@@ -24,7 +28,9 @@ shinyServer(function(input, output) {
                       ),
                       output$result <- renderPlot(
                         if(input$apply){
-                          GrafiGafas(input$picture)
+                          aux<-paste("./www/",input$picture,sep="")
+                          img<-read.pnm(aux)
+                          plot(img)
                         }
                       )
       ))
