@@ -270,15 +270,14 @@ DetectorGafas<-function(x){
   
 }
 
-<<<<<<< HEAD
+
 GrafiGafas<-function(x){
   img<-read.pnm(x)
   plot(img)
 }
-=======
 
 
 
 
 
->>>>>>> 839da13dbd0201ba68d90613a70c7df556c130a8
+
