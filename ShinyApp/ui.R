@@ -6,32 +6,11 @@ library(shinythemes)
 
 load(file= "www/001",envir = .GlobalEnv,verbose = FALSE)
 
-texto <- "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Ut ac ligula fermentum, elementum felis a, hendrerit metus.
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-Donec sagittis mattis enim, vel hendrerit libero rhoncus a. </br>
-
-Praesent id purus pharetra, accumsan ante id, ullamcorper sapien.
-Aenean auctor leo mauris, nec consectetur sapien vehicula sit amet.
-Vivamus in nulla at tortor ullamcorper tincidunt.</br>
-
-Donec leo purus, dapibus nec eros sed, ornare efficitur augue.
-Praesent pretium tempor elit, eu iaculis neque feugiat sed.
-Curabitur turpis massa, ultrices eget elit quis, molestie accumsan metus.
-In hendrerit euismod molestie. Nulla et ex vitae magna lobortis pellentesque dapibus at dui.
-Vivamus mattis diam sit amet tellus euismod, non accumsan tellus faucibus.</br>
-
-Pellentesque eu tempus diam. Donec a lacus non quam elementum rhoncus at sit amet tellus.
-Maecenas vestibulum gravida pretium. Nam malesuada risus sapien, eget consectetur enim fringilla eu.
-Integer luctus, est id porta scelerisque, sapien libero ultrices tellus, at tristique erat mauris at erat.
-Sed et efficitur nisl. Etiam suscipit ac diam vitae viverra. Proin id mauris nec leo tincidunt placerat molestie non enim. </br>
-
-Vestibulum finibus aliquet ligula sed luctus. Nulla et diam sit amet lorem fermentum iaculis nec a tortor. 
-Duis sit amet felis ac nisi pulvinar dictum. Sed porttitor nisi quis erat tincidunt, ac maximus massa facilisis.</br>
-
-Nulla vel scelerisque tortor, eget suscipit mi. Vivamus elementum magna risus. Nam dapibus hendrerit tristique. 
-Curabitur euismod turpis id egestas tempor. Aliquam tortor mi, sodales sed venenatis sit amet, sodales eget felis.
-Donec enim tellus, pharetra ut accumsan vitae, porta sed justo."
+texto <- "La aplicación en cuestión buscar identificar a las personas con gafas de sol
+a partir de técnicas de aprendizaje estadístico. Para el funcionamiento de la aplicación,
+se optó por hacer uso de las máquinas de soporte vectorial, ya que la forma del problema
+cumplía con las condiciones de una máquina de soporte vectorial estándar(para dos casos
+de la variable respuesta). Para obtener las variables para el modelo"
 
 shinyUI(fluidPage(
 theme = "style.css",

@@ -225,3 +225,8 @@ DetectorGafas<-function(x){
   return(res)
   
 }
+
+GrafiGafas<-function(x){
+  img<-read.pnm(x)
+  plot(img)
+}
