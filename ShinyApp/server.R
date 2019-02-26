@@ -1,8 +1,8 @@
 library(shiny)
-library(dplyr)
-library(MASS)
-library(Hmisc)
-library(lubridate)
+library(pixmap)
+library(stringr)
+library(e1071)
+library(shinythemes)
 
 
 shinyServer(function(input, output) {
