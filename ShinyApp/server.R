@@ -19,10 +19,10 @@ shinyServer(function(input, output) {
                       output$result <- renderText(
                         if(input$apply){
                           if(DetectorGafas(input$picture) == 1){
-                            "Tiene gafas"
+                            "Tiene gafas de sol"
                           }
                           else{
-                            "No tiene gafas"
+                            "No tiene gafas de sol"
                           }
                         }
                       ),

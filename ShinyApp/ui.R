@@ -33,7 +33,7 @@ a partir de técnicas de aprendizaje estadístico. Para el funcionamiento de la 
             <hb>
             <table>"
               
-            texto2<-"Del total de predicciones se obtuvieron 146 fallos, en otras palabras: Se obtuvo un 76.6% de éxito en las predicciones
+            texto2<-"Del total de predicciones se obtuvieron 146 fallos de un total de 624 imágenes, en otras palabras: Se obtuvo un 76.6% de éxito en las predicciones
             de la aplicación.<br><br><br><br><br><br>"
 
 
