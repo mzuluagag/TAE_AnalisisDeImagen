@@ -4,7 +4,7 @@ library(stringr)
 library(e1071)
 library(shinythemes)
 
-
+tablaRes$Total<-as.integer(tablaRes$Total)
 shinyServer(function(input, output) {
   
   output$table1=renderTable({
@@ -32,8 +32,7 @@ shinyServer(function(input, output) {
                           img<-read.pnm(aux)
                           plot(img)
                         }
-                      ),
-                      output$table <- renderDataTable(tablaRes)
+                      )
       ))
     ))
   })

@@ -184,7 +184,7 @@ tammoro<-round(tammoPredict)
 vecfallos<-append(vecfallos,length(which(datos_tammo$V3!=tammoro)))
 vecEx<-round(append(vecEx,1-(length(which(datos_tammo$V3!=tammoro))/nrow(datos_tammo))),2)
 
-vecTotal<-c(32,32,32,32,32,32,31,31,30,31,31,32,30,28,32,31,32,32,31,30)
+vecTotal<-round(c(32,32,32,32,32,32,31,31,30,31,31,32,30,28,32,31,32,32,31,30))
 
 
 
