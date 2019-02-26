@@ -185,7 +185,8 @@ vecEx<-append(vecEx,1-(length(which(datos_tammo$V3!=tammoro))/nrow(datos_tammo))
 
 DetectorGafas<-function(x){
   aux<-str_extract(x, ".+?(?=_)")
-  if (x=="an2i"){
-    
+  if (aux=="an2i"){
+    ind<-which(datos_an2i==x)
+    res<-as.numeric(an2iro[ind])
   }
 }
