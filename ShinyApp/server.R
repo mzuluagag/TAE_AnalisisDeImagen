@@ -32,7 +32,8 @@ shinyServer(function(input, output) {
                           img<-read.pnm(aux)
                           plot(img)
                         }
-                      )
+                      ),
+                      output$table <- renderDataTable(tablaRes)
       ))
     ))
   })
