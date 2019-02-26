@@ -186,9 +186,10 @@ vecEx<-round(append(vecEx,1-(length(which(datos_tammo$V3!=tammoro))/nrow(datos_t
 
 vecTotal<-vecfallos/(1-vecEx)
 vecTotal[is.na(vecTotal)]<-32
+
 tablaRes<-data.frame(personCod,vecfallos,vecTotal,vecEx)
 
-colnames[tablaRes]<-"Persona","Fallos","Total","Proporción"
+colnames(tablaRes)[]<-c("Persona","Fallos","Total","Proporción")
 
 DetectorGafas<-function(x){
   aux<-str_extract(x, ".+?(?=_)")
@@ -276,7 +277,7 @@ DetectorGafas<-function(x){
   
 }
 
-
+setwd
 GrafiGafas<-function(x){
   img<-read.pnm(x)
   plot(img)
