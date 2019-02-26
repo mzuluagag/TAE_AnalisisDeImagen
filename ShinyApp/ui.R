@@ -4,6 +4,9 @@ library(dplyr)
 library(Hmisc)
 library(lubridate)
 library(shinythemes)
+
+load(file= "www/001",envir = .GlobalEnv,verbose = FALSE)
+
 texto <- "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 Ut ac ligula fermentum, elementum felis a, hendrerit metus.
 Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -36,9 +39,8 @@ theme = "style.css",
 fillRow(navbarPage("Detector de lentes",
                    tabPanel(class="wrapper", "Aplicacion",
                             fluidRow(column(10, align = "center", offset = 1, h2("Detector de lentes"))),
-                            fluidRow(column(12, align = "center", fileInput("picture", "Selecciona un archivo(PNG/JPEG)",
-                                                                            accept = c('image/png', 'image/jpeg'),
-                                                                            width = '60%'))),
+                            fluidRow(column(12, align = "center", selectInput("picture", "Seleccione...",
+                                                                              choices = listaArchivos))),
                             fluidRow(column(12, align = "center", actionButton("apply", label = "Analizar imagen")))),
                    
                    tabPanel(class="wrapper", "Explicacion",
