@@ -1,11 +1,11 @@
 library(shiny)
 library(pixmap)
 library(stringr)
-library(e1071)
+library(keras)
 library(shinythemes)
 
-load(file= "www/001",envir = .GlobalEnv,verbose = FALSE)
-
+load(file= "www/funcion",envir = .GlobalEnv,verbose = FALSE)
+modelof<-load_model_hdf5("www/red")
 texto<-"La aplicación en cuestión busca identificar a las personas con gafas de sol
 a partir de técnicas de aprendizaje estadístico. Para el funcionamiento de la aplicación,
             se optó por hacer uso de las máquinas de soporte vectorial, ya que la forma del problema
