@@ -5,7 +5,6 @@ library(keras)
 library(shinythemes)
 
 
-
 modelof<-load_model_hdf5("www/red")
 DetectorGafas<-function(x){
   img<-read.pnm(x,cellres=1)
@@ -36,8 +35,9 @@ shinyServer(function(input, output) {
                       ),
                       output$result <- renderPlot(
                         if(input$apply){
-                          aux<-paste("./www/",input$picture,sep="")
-                          img<-read.pnm(aux)
+                          aux<-paste("./www/faces_full/",input$picture,sep="")
+                          aux<-str_remove(aux,"_4")
+                          img<-read.pnm(aux,cellres=1)
                           plot(img)
                         }
                       )

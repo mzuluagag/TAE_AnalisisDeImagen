@@ -8,7 +8,7 @@ listaArchivos<-list.files(pattern=".pgm$")
 data<-NULL
 images <- list()
 for (i in 1:length(listaArchivos)){
-  images[[i]] <- read.pnm(listaArchivos[i])
+  images[[i]] <- read.pnm(listaArchivos[i],cellres=1)
   data<-rbind(data,as.vector(images[[i]]@grey))
 }
 resp<-c()

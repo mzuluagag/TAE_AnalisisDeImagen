@@ -4,36 +4,32 @@ library(stringr)
 library(keras)
 library(shinythemes)
 
+
 load(file= "www/funcion",envir = .GlobalEnv,verbose = FALSE)
 modelof<-load_model_hdf5("www/red")
 texto<-"La aplicación en cuestión busca identificar a las personas con gafas de sol
 a partir de técnicas de aprendizaje estadístico. Para el funcionamiento de la aplicación,
-            se optó por hacer uso de las máquinas de soporte vectorial, ya que la forma del problema
-            cumplía con las condiciones de una máquina de soporte vectorial estándar(para dos casos
-            de la variable respuesta).<br><br>
-            Inicialmente se procedió a solo usar las imágenes de mayor resolución porque son las que mayor información poseen(para esto, se utilizó algoritmo en Python).
-            Para obtener las variables para el modelo, se hizo lo siguiente: 
+            se optó por hacer uso de redes neuronales a partir del paquete 'keras' de R.<br><br>
+            Inicialmente se procedió a solo usar las imágenes de menor resolución porque son las que menos carga representan para la máquina, 
+            se intentó con las de mayor resolución pero fue imposible(para el filtrado se utilizó un algoritmo en Python).
+            Para obtener el modelo, se hizo lo siguiente: 
             Se usó la librería pixmap para cargar las imágenes en formato .pgm con la función read.pnm,
-            luego de esto, se le extrajo a cada imagen una matriz de 120x128 dónde cada entrada de esta era 
-            el color de cada pixel en donde cada entrada era entre 0 y 1(0 era negro y 1 era blanco(escala de grises)), se le calculó la media
-            a la matriz, ya que se observó que las gafas de sol al ser negras dan muchos entradas de la matriz en 0, 
-            por lo tanto cómo primer supuesto se dedujo que al tener gafas de sol, la media de la matriz iba a ser menor
-            en comparación a la matriz de una foto sin gafas. También al agrupar todas las medias de las fotos en
-            un dataframe y extraer del nombre la palabara 'open' o 'sunglasses', se notó que entre personas
-            no podía ser generalizable un solo modelo, ya que no todas las personas tienen el mismo tono de piel, cantidad de cabello,
-            color de cabello, el tamaño de la cabeza, entre otros factores. Dado lo anterior, se optó por calcular un modelo
-            estadístico para cada individuo.<br><br>
+            luego de esto, se le extrajo a cada imagen una matriz de 30x32 dónde cada entrada de esta era 
+            el color de cada pixel en donde cada entrada era entre 0 y 1(0 era negro y 1 era blanco(escala de grises)),
+            luego se volvió un vector fila y se agregó a un dataframe para entrenar el modelo.
+            <br><br>
 
-            Cómo se mencionó anteriormente, se calcularon 20 máquinas de soporte vectorial estándar, una por cada persona
-            en la base de datos; la aplicación funciona de la siguiente manera: La persona escoge una imagen del menú desplegable(se excluyeron las imágenes corruptas(.bad)).
-            Luego de esto, se le ingresa el nombre de la imagen cómo una cadena de texo a una función alojada en una imagen de R, la cuál
-            verifica quién es la persona en cuestión. Al verificar, carga las predicciones hechas para esa persona y devuelve la de la imagen escogida.
+            Cómo se mencionó anteriormente, se calculó un modelo secuencial de redes neuronales a partir de Keras para
+            datos categóricos con 2 posibles valores(0 o 1, el tener gafas o no). La aplicación funciona de la siguiente manera: La persona escoge una imagen del menú desplegable(se excluyeron las imágenes corruptas(.bad)).
+            Luego de esto, se le ingresa el nombre de la imagen cómo una cadena de texto, se convierte la cadena en una ruta y esta se ingresa a una función, la cuál
+            busca el archivo, redimensiona la imagen en las dimensiones(shape) del modelo, lo ingresa y hace la predicción.
+<br>
             La función retorna un 1 o un 0, pero en la aplicación se le transformó a un texto más amigable al usuario final.<br><br>
             Al calcular todas las predicciones, en resumen se obtuvo:<br><br>
             <hb>
             <table>"
               
-            texto2<-"Del total de predicciones se obtuvieron 146 fallos de un total de 624 imágenes, en otras palabras: Se obtuvo un 76.6% de éxito en las predicciones
+            texto2<-"Del total de predicciones se obtuvieron 3 fallos de un total de 624 imágenes, en otras palabras: Se obtuvo un 99.519% de éxito en las predicciones
             de la aplicación.<br><br><br><br><br><br>"
 
 
